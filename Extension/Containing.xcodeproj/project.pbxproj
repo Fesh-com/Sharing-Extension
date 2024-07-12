@@ -10,7 +10,6 @@
 		4E0A70B02C35FEE8002485BB /* ContainingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A70AF2C35FEE8002485BB /* ContainingApp.swift */; };
 		4E0A70B22C35FEE8002485BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A70B12C35FEE8002485BB /* ContentView.swift */; };
 		4E0A70B42C35FEE9002485BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A70B32C35FEE9002485BB /* Assets.xcassets */; };
-		4E0A70B72C35FEE9002485BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A70B62C35FEE9002485BB /* Preview Assets.xcassets */; };
 		4E0A70E52C3606D6002485BB /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A70E42C3606D6002485BB /* ShareViewController.swift */; };
 		4E0A70EC2C3606D6002485BB /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4E0A70E22C3606D6002485BB /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4E0A70F22C3651B6002485BB /* ShareExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A70F12C3651B6002485BB /* ShareExtensionView.swift */; };
@@ -49,7 +48,6 @@
 		4E0A70AF2C35FEE8002485BB /* ContainingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainingApp.swift; sourceTree = "<group>"; };
 		4E0A70B12C35FEE8002485BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4E0A70B32C35FEE9002485BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4E0A70B62C35FEE9002485BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4E0A70E22C3606D6002485BB /* ShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0A70E42C3606D6002485BB /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4E0A70E92C3606D6002485BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,17 +101,8 @@
 				4E0A70B12C35FEE8002485BB /* ContentView.swift */,
 				4E0A71102C366469002485BB /* Info.plist */,
 				4E0A70B32C35FEE9002485BB /* Assets.xcassets */,
-				4E0A70B52C35FEE9002485BB /* Preview Content */,
 			);
 			path = Containing;
-			sourceTree = "<group>";
-		};
-		4E0A70B52C35FEE9002485BB /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				4E0A70B62C35FEE9002485BB /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		4E0A70E32C3606D6002485BB /* ShareExtension */ = {
@@ -216,7 +205,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E0A70B72C35FEE9002485BB /* Preview Assets.xcassets in Resources */,
 				4E0A70B42C35FEE9002485BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,7 +387,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Containing/Preview Content\"";
 				DEVELOPMENT_TEAM = MX5VMG8N6Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -438,7 +425,6 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Containing/Preview Content\"";
 				DEVELOPMENT_TEAM = MX5VMG8N6Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
