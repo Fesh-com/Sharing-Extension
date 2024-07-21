@@ -51,14 +51,11 @@ class ShareViewController: UIViewController {
             itemProvider.loadItem(forTypeIdentifier: shareInputType , options: nil) { [weak self] (input, error) in
                 guard error == nil else { self?.cancel(error: error!); return }
 
-                let inputText = String(describing: input)
-                self?.logger.log("❗️text=\(inputText)")
-//                guard let itemDictionary = dict as? NSDictionary else { return }
-                if let shareInput = input as? ShareInput {
-                    let text = shareInput.inputStr
-
-                    if self != nil {
+                if self != nil {
+                    do {
+                        let shareInput = try JSONDecoder().decode(ShareInput.self, from: input as! Data)
                         // if we get here, we're good and can show the View :D
+                        let text = shareInput.inputStr2
                         DispatchQueue.main.async {
                             // host the SwiftU view
                             let extensionView = ShareExtensionView(extensionContext: self!.extensionContext,
@@ -74,6 +71,17 @@ class ShareViewController: UIViewController {
                             contentView.view.leftAnchor.constraint(equalTo: self!.view.leftAnchor).isActive = true
                             contentView.view.rightAnchor.constraint (equalTo: self!.view.rightAnchor).isActive = true
                         }
+
+                        self?.observer = self?.center.addObserver(forName: .closeExtension, object: nil, queue: nil) { _ in
+                            DispatchQueue.main.async {
+                                self?.done()
+                            }
+                        }
+                        // done, extension is now showing the data
+                        return
+
+                    } catch let error {
+                        self?.logger.log("\(error)")
                     }
                 }
             }
@@ -100,6 +108,12 @@ class ShareViewController: UIViewController {
                             contentView.view.leftAnchor.constraint(equalTo: self!.view.leftAnchor).isActive = true
                             contentView.view.rightAnchor.constraint (equalTo: self!.view.rightAnchor).isActive = true
                         }
+
+                        self?.observer = self?.center.addObserver(forName: .closeExtension, object: nil, queue: nil) { _ in
+                            DispatchQueue.main.async {
+                                self?.done()
+                            }
+                        }
                     }
                 } else {
                     let string = String(describing: providedText)
@@ -108,15 +122,9 @@ class ShareViewController: UIViewController {
                     return
                 }
             }
-            observer = center.addObserver(forName: .closeExtension, object: nil, queue: nil) { _ in
-                DispatchQueue.main.async {
-                    self.done()
-                }
-            }
         } else {
-            logger.error("❗️❗️No Text ❗️❗️")
+            logger.error("❗️❗️Neither ShareInput nor Text ❗️❗️")
             cancel(error: SharingError.inputItemError)
-            return
         }
     }
 
