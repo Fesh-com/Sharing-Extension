@@ -3,11 +3,13 @@ Sample to show the data transfer between the HostApp and the Sharing-Extension o
 
 See: https://developer.apple.com/forums/thread/759383
 
-Build and install (no need to run) the Containing target.
+###Preparations
+Build and run the Containing target.  
 Build and run the Host target.
-Tap one of the three sharing buttons, then select the ContainingApp to share with its ShareExtension.
 
-## Debug the Extension
-Choose the ShareExtension target, ctrl-click the Run button to Debug without building.
-It asks you to choose an app to run, choose Hosting-App.
-In the Hosting-App, tap on the three sharing buttons...
+
+### Debug the Extension
+Choose the ShareExtension target, Run without building (it was built and installed with the ContainingApp).  
+Xcode asks you to choose an app to run, choose the Hosting-App.
+
+In the Hosting-App, tap one of the three sharing buttons, then select the ContainingApp to share with the ShareExtension.
