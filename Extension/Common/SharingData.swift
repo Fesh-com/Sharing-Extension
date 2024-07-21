@@ -36,7 +36,9 @@ class ItemSource: NSObject, UIActivityItemSource {
 }
 // MARK: -
 struct ShareInput: Codable {
-    var inputStr: String
+    var inputStr1: String
+    var inputStr2: String
+    var inputStr3: String
     // ... more input data
 }
 

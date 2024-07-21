@@ -9,13 +9,15 @@ import SwiftUI
 struct HostContentView: View {
     var body: some View {
         let preview = SharePreview("shareInput", image: Image(systemName: "arrowshape.right.fill"))
-        let shareInput = ShareInput(inputStr: "ShareInput as JSON")
+        let shareInput = ShareInput(inputStr1: "prefix",
+                                    inputStr2: "ShareInput as JSON",
+                                    inputStr3: "postfix")
 
         VStack(spacing: 25.0) {
             Text("HostApp!")
             ShareButton(title: "Text", shareItems: [ItemSource(dataToShare: "sharing some text")])
             ShareButton(title: "JSON", shareItems: [ItemSource(dataToShare: shareInput)
-                                                   ,ItemSource(dataToShare: "sharing some text")
+//                                                   ,ItemSource(dataToShare: "sharing some text")
                                                    ])
             ShareLink("ShareLink", item: shareInput, preview: preview)
         }
