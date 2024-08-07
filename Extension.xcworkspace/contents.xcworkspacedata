@@ -7,4 +7,7 @@
    <FileRef
       location = "group:Extension/HostSwiftUI.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Extension/HostUIKit.xcodeproj">
+   </FileRef>
 </Workspace>
