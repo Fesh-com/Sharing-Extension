@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSExtension</key>
+	<dict>
+		<key>NSExtensionAttributes</key>
+		<dict>
+            <key>NSExtensionActivationRule</key>
+            <string>TRUEPREDICATE</string>
+            <key>NSExtensionActivationRule2</key>
+            <string>SUBQUERY (
+                extensionItems,
+                $extensionItem,
+                SUBQUERY (
+                $extensionItem.attachments,
+                $attachment,
+                ANY $attachment.registeredTypeIdentifiers UTI-CONFORMS-TO &quot;com.fesh.shareInput&quot;
+                ).@count == $extensionItem.attachments.@count
+                ).@count == 1
+            </string>
+			<key>NSExtensionServiceAllowsFinderPreviewItem</key>
+			<false/>
+			<key>NSExtensionServiceAllowsTouchBarItem</key>
+			<false/>
+			<key>NSExtensionServiceFinderPreviewIconName</key>
+			<string>NSActionTemplate</string>
+			<key>NSExtensionServiceTouchBarBezelColorName</key>
+			<string>TouchBarBezel</string>
+			<key>NSExtensionServiceTouchBarIconName</key>
+			<string>NSActionTemplate</string>
+		</dict>
+		<key>NSExtensionPointIdentifier</key>
+		<string>com.apple.ui-services</string>
+        <key>NSExtensionPrincipalClass</key>
+        <string>$(PRODUCT_MODULE_NAME).ShareViewController</string>
+        <key>NSExtensionShareWantsFullScreenPresentation</key>
+        <true/>
+	</dict>
+    <key>UTExportedTypeDeclarations</key>
+    <array>
+        <dict>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.json</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>ShareExtension shareInput</string>
+            <key>UTTypeIconFiles</key>
+            <array/>
+            <key>UTTypeIdentifier</key>
+            <string>com.fesh.shareinput</string>
+            <key>UTTypeReferenceURL</key>
+            <string>https://fesh.com/com.fesh.shareinput</string>
+            <key>UTTypeTagSpecification</key>
+            <dict/>
+        </dict>
+        <dict>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.json</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>ShareExtension inputItemSource</string>
+            <key>UTTypeIconFiles</key>
+            <array/>
+            <key>UTTypeIdentifier</key>
+            <string>com.fesh.inputitemsource</string>
+            <key>UTTypeReferenceURL</key>
+            <string>https://fesh.com/com.fesh.inputitemsource</string>
+            <key>UTTypeTagSpecification</key>
+            <dict/>
+        </dict>
+        <dict>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.json</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>ShareExtension shareResult</string>
+            <key>UTTypeIconFiles</key>
+            <array/>
+            <key>UTTypeIdentifier</key>
+            <string>com.fesh.shareresult</string>
+            <key>UTTypeReferenceURL</key>
+            <string>https://fesh.com/com.fesh.shareresult</string>
+            <key>UTTypeTagSpecification</key>
+            <dict/>
+        </dict>
+        <dict>
+            <key>UTTypeConformsTo</key>
+            <array>
+                <string>public.json</string>
+            </array>
+            <key>UTTypeDescription</key>
+            <string>ShareExtension resultItemSource</string>
+            <key>UTTypeIconFiles</key>
+            <array/>
+            <key>UTTypeIdentifier</key>
+            <string>com.fesh.resultitemsource</string>
+            <key>UTTypeReferenceURL</key>
+            <string>https://fesh.com/com.fesh.resultitemsource</string>
+            <key>UTTypeTagSpecification</key>
+            <dict/>
+        </dict>
+    </array>
+</dict>
+</plist>
