@@ -13,10 +13,11 @@
 		4E0A70E52C3606D6002485BB /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A70E42C3606D6002485BB /* ShareViewController.swift */; };
 		4E0A70EC2C3606D6002485BB /* ShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 4E0A70E22C3606D6002485BB /* ShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4E0A70F22C3651B6002485BB /* ShareExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A70F12C3651B6002485BB /* ShareExtensionView.swift */; };
-		4E0A710A2C3660E6002485BB /* SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A71072C3660E6002485BB /* SharingData.swift */; };
-		4E0A710B2C3660E6002485BB /* SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A71072C3660E6002485BB /* SharingData.swift */; };
-		4E0A710C2C3660E6002485BB /* UTType+SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A71082C3660E6002485BB /* UTType+SharingData.swift */; };
-		4E0A710D2C3660E6002485BB /* UTType+SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A71082C3660E6002485BB /* UTType+SharingData.swift */; };
+		4E3C812D2C520B8300F99EAD /* UTType+ExportSharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C812C2C520B8300F99EAD /* UTType+ExportSharingData.swift */; };
+		4E3C81302C52106900F99EAD /* UTType+ExportSharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C812C2C520B8300F99EAD /* UTType+ExportSharingData.swift */; };
+		4E3C81322C5210A500F99EAD /* SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C81312C5210A500F99EAD /* SharingData.swift */; };
+		4E3C81332C5210A500F99EAD /* SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C81312C5210A500F99EAD /* SharingData.swift */; };
+		4EFC207F2C623897003A1D70 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EFC207E2C623897003A1D70 /* UniformTypeIdentifiers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,9 +53,11 @@
 		4E0A70E42C3606D6002485BB /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		4E0A70E92C3606D6002485BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E0A70F12C3651B6002485BB /* ShareExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareExtensionView.swift; sourceTree = "<group>"; };
-		4E0A71072C3660E6002485BB /* SharingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingData.swift; sourceTree = "<group>"; };
-		4E0A71082C3660E6002485BB /* UTType+SharingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UTType+SharingData.swift"; sourceTree = "<group>"; };
 		4E0A71102C366469002485BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E3C812C2C520B8300F99EAD /* UTType+ExportSharingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UTType+ExportSharingData.swift"; sourceTree = "<group>"; };
+		4E3C81312C5210A500F99EAD /* SharingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingData.swift; sourceTree = "<group>"; };
+		4EFC207E2C623897003A1D70 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		4EFC20882C623897003A1D70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EFC20932C63C323003A1D70 /* UniformTypeIdentifiers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,8 +83,9 @@
 			isa = PBXGroup;
 			children = (
 				4E0A71092C3660E6002485BB /* Common */,
-				4E0A70AE2C35FEE8002485BB /* Containing */,
 				4E0A70E32C3606D6002485BB /* ShareExtension */,
+				4E0A70AE2C35FEE8002485BB /* Containing */,
+				4EFC207D2C623897003A1D70 /* Frameworks */,
 				4E0A70AD2C35FEE8002485BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,9 +113,9 @@
 		4E0A70E32C3606D6002485BB /* ShareExtension */ = {
 			isa = PBXGroup;
 			children = (
+				4E0A70E92C3606D6002485BB /* Info.plist */,
 				4E0A70E42C3606D6002485BB /* ShareViewController.swift */,
 				4E0A70F12C3651B6002485BB /* ShareExtensionView.swift */,
-				4E0A70E92C3606D6002485BB /* Info.plist */,
 			);
 			path = ShareExtension;
 			sourceTree = "<group>";
@@ -118,10 +123,18 @@
 		4E0A71092C3660E6002485BB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				4E0A71072C3660E6002485BB /* SharingData.swift */,
-				4E0A71082C3660E6002485BB /* UTType+SharingData.swift */,
+				4E3C81312C5210A500F99EAD /* SharingData.swift */,
+				4E3C812C2C520B8300F99EAD /* UTType+ExportSharingData.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		4EFC207D2C623897003A1D70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4EFC207E2C623897003A1D70 /* UniformTypeIdentifiers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,10 +236,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E0A70B22C35FEE8002485BB /* ContentView.swift in Sources */,
-				4E0A710A2C3660E6002485BB /* SharingData.swift in Sources */,
 				4E0A70B02C35FEE8002485BB /* ContainingApp.swift in Sources */,
-				4E0A710C2C3660E6002485BB /* UTType+SharingData.swift in Sources */,
+				4E0A70B22C35FEE8002485BB /* ContentView.swift in Sources */,
+				4E3C81322C5210A500F99EAD /* SharingData.swift in Sources */,
+				4E3C81302C52106900F99EAD /* UTType+ExportSharingData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,10 +247,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E0A70F22C3651B6002485BB /* ShareExtensionView.swift in Sources */,
-				4E0A710B2C3660E6002485BB /* SharingData.swift in Sources */,
 				4E0A70E52C3606D6002485BB /* ShareViewController.swift in Sources */,
-				4E0A710D2C3660E6002485BB /* UTType+SharingData.swift in Sources */,
+				4E0A70F22C3651B6002485BB /* ShareExtensionView.swift in Sources */,
+				4E3C812D2C520B8300F99EAD /* UTType+ExportSharingData.swift in Sources */,
+				4E3C81332C5210A500F99EAD /* SharingData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -367,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -391,13 +404,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Containing/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Containing-App";
+				INFOPLIST_KEY_CFBundleDisplayName = ContainingApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -429,13 +442,13 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Containing/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Containing-App";
+				INFOPLIST_KEY_CFBundleDisplayName = ContainingApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -465,14 +478,14 @@
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© Fesh.com";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fesh.containingdemo.ShareExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fesh.containingdemo.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -497,14 +510,14 @@
 				INFOPLIST_FILE = ShareExtension/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = ShareExtension;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "© Fesh.com";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fesh.containingdemo.ShareExtensionDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fesh.containingdemo.ShareExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

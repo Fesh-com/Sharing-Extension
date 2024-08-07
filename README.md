@@ -1,7 +1,8 @@
 # Sharing-Extension
 Sample to show the data transfer between the HostApp and the Sharing-Extension of a ContainingApp
 
-See: https://developer.apple.com/forums/thread/759383
+See: https://developer.apple.com/forums/thread/759383  
+
 
 ###Preparations
 Build and run the Containing target.  

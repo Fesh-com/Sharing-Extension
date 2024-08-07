@@ -5,6 +5,6 @@
       location = "group:Extension/Containing.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Extension/Host.xcodeproj">
+      location = "group:Extension/HostSwiftUI.xcodeproj">
    </FileRef>
 </Workspace>

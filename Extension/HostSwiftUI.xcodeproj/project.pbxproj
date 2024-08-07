@@ -11,19 +11,21 @@
 		4E0A70CC2C35FF3C002485BB /* HostContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A70CB2C35FF3C002485BB /* HostContentView.swift */; };
 		4E0A70CE2C35FF3D002485BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0A70CD2C35FF3D002485BB /* Assets.xcassets */; };
 		4E0A70F82C365A05002485BB /* ShareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A70F72C365A05002485BB /* ShareButton.swift */; };
-		4E0A71052C365F2F002485BB /* SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A71022C365F2F002485BB /* SharingData.swift */; };
-		4E0A71062C365F2F002485BB /* UTType+SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0A71032C365F2F002485BB /* UTType+SharingData.swift */; };
+		4E3C812B2C52061700F99EAD /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C812A2C52061700F99EAD /* ActivityViewController.swift */; };
+		4E3C812F2C520BAC00F99EAD /* UTType+ImportSharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C812E2C520BAC00F99EAD /* UTType+ImportSharingData.swift */; };
+		4E3C81352C5210B700F99EAD /* SharingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3C81342C5210B700F99EAD /* SharingData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E0A70C62C35FF3C002485BB /* Host.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Host.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0A70C62C35FF3C002485BB /* HostSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HostSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0A70C92C35FF3C002485BB /* HostApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostApp.swift; sourceTree = "<group>"; };
 		4E0A70CB2C35FF3C002485BB /* HostContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostContentView.swift; sourceTree = "<group>"; };
 		4E0A70CD2C35FF3D002485BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E0A70F72C365A05002485BB /* ShareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareButton.swift; sourceTree = "<group>"; };
-		4E0A71022C365F2F002485BB /* SharingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingData.swift; sourceTree = "<group>"; };
-		4E0A71032C365F2F002485BB /* UTType+SharingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UTType+SharingData.swift"; sourceTree = "<group>"; };
 		4E0A710E2C366320002485BB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E3C812A2C52061700F99EAD /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		4E3C812E2C520BAC00F99EAD /* UTType+ImportSharingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UTType+ImportSharingData.swift"; sourceTree = "<group>"; };
+		4E3C81342C5210B700F99EAD /* SharingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharingData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +43,7 @@
 			isa = PBXGroup;
 			children = (
 				4E0A71042C365F2F002485BB /* Common */,
-				4E0A70C82C35FF3C002485BB /* Host */,
+				4E0A70C82C35FF3C002485BB /* HostSwiftUI */,
 				4E0A70C72C35FF3C002485BB /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,28 +51,29 @@
 		4E0A70C72C35FF3C002485BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E0A70C62C35FF3C002485BB /* Host.app */,
+				4E0A70C62C35FF3C002485BB /* HostSwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4E0A70C82C35FF3C002485BB /* Host */ = {
+		4E0A70C82C35FF3C002485BB /* HostSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
 				4E0A70C92C35FF3C002485BB /* HostApp.swift */,
 				4E0A70CB2C35FF3C002485BB /* HostContentView.swift */,
 				4E0A70F72C365A05002485BB /* ShareButton.swift */,
+				4E3C812A2C52061700F99EAD /* ActivityViewController.swift */,
 				4E0A710E2C366320002485BB /* Info.plist */,
 				4E0A70CD2C35FF3D002485BB /* Assets.xcassets */,
 			);
-			path = Host;
+			path = HostSwiftUI;
 			sourceTree = "<group>";
 		};
 		4E0A71042C365F2F002485BB /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				4E0A71022C365F2F002485BB /* SharingData.swift */,
-				4E0A71032C365F2F002485BB /* UTType+SharingData.swift */,
+				4E3C81342C5210B700F99EAD /* SharingData.swift */,
+				4E3C812E2C520BAC00F99EAD /* UTType+ImportSharingData.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -78,9 +81,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E0A70C52C35FF3C002485BB /* Host */ = {
+		4E0A70C52C35FF3C002485BB /* HostSwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E0A70D42C35FF3D002485BB /* Build configuration list for PBXNativeTarget "Host" */;
+			buildConfigurationList = 4E0A70D42C35FF3D002485BB /* Build configuration list for PBXNativeTarget "HostSwiftUI" */;
 			buildPhases = (
 				4E0A70C22C35FF3C002485BB /* Sources */,
 				4E0A70C32C35FF3C002485BB /* Frameworks */,
@@ -90,9 +93,9 @@
 			);
 			dependencies = (
 			);
-			name = Host;
-			productName = Host;
-			productReference = 4E0A70C62C35FF3C002485BB /* Host.app */;
+			name = HostSwiftUI;
+			productName = HostSwiftUI;
+			productReference = 4E0A70C62C35FF3C002485BB /* HostSwiftUI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +113,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E0A70C12C35FF3C002485BB /* Build configuration list for PBXProject "Host" */;
+			buildConfigurationList = 4E0A70C12C35FF3C002485BB /* Build configuration list for PBXProject "HostSwiftUI" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +126,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E0A70C52C35FF3C002485BB /* Host */,
+				4E0A70C52C35FF3C002485BB /* HostSwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -145,9 +148,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0A70CC2C35FF3C002485BB /* HostContentView.swift in Sources */,
+				4E3C812B2C52061700F99EAD /* ActivityViewController.swift in Sources */,
 				4E0A70F82C365A05002485BB /* ShareButton.swift in Sources */,
-				4E0A71052C365F2F002485BB /* SharingData.swift in Sources */,
-				4E0A71062C365F2F002485BB /* UTType+SharingData.swift in Sources */,
+				4E3C812F2C520BAC00F99EAD /* UTType+ImportSharingData.swift in Sources */,
+				4E3C81352C5210B700F99EAD /* SharingData.swift in Sources */,
 				4E0A70CA2C35FF3C002485BB /* HostApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,25 +289,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Host/$(TARGET_NAME).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "HostSwiftUI/$(TARGET_NAME).entitlements";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MX5VMG8N6Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Host/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Hosting-App";
+				INFOPLIST_FILE = HostSwiftUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HostSwiftUI;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fesh.HostDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fesh.HostSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -320,25 +324,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Host/$(TARGET_NAME).entitlements";
+				CODE_SIGN_ENTITLEMENTS = "HostSwiftUI/$(TARGET_NAME).entitlements";
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MX5VMG8N6Z;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Host/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Hosting-App";
+				INFOPLIST_FILE = HostSwiftUI/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = HostSwiftUI;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fesh.HostDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fesh.HostSwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -353,7 +357,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E0A70C12C35FF3C002485BB /* Build configuration list for PBXProject "Host" */ = {
+		4E0A70C12C35FF3C002485BB /* Build configuration list for PBXProject "HostSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E0A70D22C35FF3D002485BB /* Debug */,
@@ -362,7 +366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E0A70D42C35FF3D002485BB /* Build configuration list for PBXNativeTarget "Host" */ = {
+		4E0A70D42C35FF3D002485BB /* Build configuration list for PBXNativeTarget "HostSwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E0A70D52C35FF3D002485BB /* Debug */,

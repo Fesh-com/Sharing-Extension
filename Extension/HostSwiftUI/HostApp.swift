@@ -1,6 +1,6 @@
 //
 //  HostApp.swift
-//  Host
+//  HostSwiftUI
 //
 //  Created by Marc Stibane on 2024-07-03.
 //

@@ -1,6 +1,6 @@
 //
 //  ShareButton.swift
-//  Host
+//  HostSwiftUI
 //
 //  Created by Marc Stibane on 2024-07-04.
 //
@@ -9,8 +9,30 @@ import UIKit
 import SwiftUI
 import os.log
 // MARK: -
+class ActivityItemSource: NSObject, UIActivityItemSource {
+    let dataToShare: Any
+
+    init(dataToShare: Any) {
+        self.dataToShare = dataToShare
+    }
+
+    func activityViewControllerPlaceholderItem(_ activityViewController: UIActivityViewController) -> Any {
+        return dataToShare
+    }
+
+    func activityViewController(_ activityViewController: UIActivityViewController,
+                        itemForActivityType activityType: UIActivity.ActivityType?) -> Any? {
+        if let activityType, activityType == .copyToPasteboard {
+            return "copyToPasteboard"
+        } else {
+            return dataToShare
+        }
+    }
+}
+// MARK: -
 struct ShareButton: View {
     var title: String
+//    var shareItems: [InputItemSource]
     var shareItems: [UIActivityItemSource]
 
     let logger = Logger(subsystem: "com.fesh.Host", category: "ShareSheet")
@@ -25,7 +47,7 @@ struct ShareButton: View {
     }
 
     func share() {
-        let completionHandler: UIActivityViewController.CompletionWithItemsHandler = {
+        let completionHandler: UIActivityViewController.CompletionWithItemsHandler = { [self]
             (type: UIActivity.ActivityType?, completed: Bool, retItems: [Any]?, error:Error?) in
 ///            Upon the completion of an activity, or the dismissal of the activity view controller, the view controller’s completion block is executed.
 ///            You can use this block to execute any final code related to the service. The parameters of this block are as follows:
@@ -71,7 +93,7 @@ struct ShareButton: View {
                                                   applicationActivities: [])
         activityViewController!.completionWithItemsHandler = completionHandler
         activityViewController!.excludedActivityTypes = [
-//            .addToHomeScreen,     needs iOS 16.4
+            .addToHomeScreen,           // needs iOS 16.4
             .addToReadingList,
             .airDrop,
             .assignToContact,
